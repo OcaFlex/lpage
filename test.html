@@ -19,13 +19,25 @@
   <h1>Test Page</h1>
  
   <!-- <p>The URL you tried to access was: <strong id="original-url"></strong></p> -->
+  <p>The URL you tried to access was: <strong id="original-url"></strong></p>
+  <p>The query parameters were: <strong id="url-params"></strong></p>
 
   <script>
     // Get the current URL from the browser's address bar
-    // const originalUrl = window.location.href;
+    const originalUrl = window.location.href;
+
+    // Extract query parameters from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Convert the query parameters to a readable string
+    const paramsString = urlParams.toString().replace(/&/g, ', ');
 
     // Output the original URL to the <p> element with id "original-url"
-    // document.getElementById('original-url').textContent = originalUrl;
+    document.getElementById('original-url').textContent = originalUrl;
+
+    // Output the query parameters to the <p> element with id "url-params"
+    document.getElementById('url-params').textContent = paramsString || 'None';
   </script>
+
 </body>
 </html>
