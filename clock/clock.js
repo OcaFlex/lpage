@@ -1,3 +1,4 @@
+
 window.onload = function() {
 
 const hourHand = document.querySelector('.hourHand');
