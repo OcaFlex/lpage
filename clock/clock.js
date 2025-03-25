@@ -15,7 +15,7 @@ const hourHand = document.querySelector('.hourHand');
         const secondDeg = ((second / 60) * 360) + 360; 
         secondHand.style.transform = `rotate(${secondDeg}deg)`;
       
-        audio.play();
+        // audio.play();
         
         const minute = today.getMinutes();
         const minuteDeg = ((minute / 60) * 360); 
